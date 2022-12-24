@@ -3,9 +3,17 @@ body{
 #Uvodna{
   background: #5cdb95;
 }
-
-
+#Funkcije{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: aquamarine;
+}
 .container-fluid{
+  margin: 0 auto;
   padding: 6% 10%;
 }
 
@@ -45,4 +53,95 @@ body{
 #Funkcije{
   background-color: #05386b;
   background-image: url("https://www.transparenttextures.com/patterns/lined-paper-2.png");
+}
+#klizac{
+  position: relative;
+
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+.slideshow_slike{
+  width: 20%;
+  height: auto;
+}
+#klizac ul {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition: all 750ms ease;
+  left: 0;
+}
+#slider ul li {
+  position: relative;
+  height: 100%;
+  float: left;
+}
+
+/* AAAAAAAAAAAAAAAAAAAAAAAAA */
+
+.slider{
+  width: 512px;
+  height: 712px;
+  overflow: hidden;
+}
+
+.slides{
+  width: 400%;
+  height:auto;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 26%;
+  transition: 2s;
+}
+
+.slide img{
+  width: 90%;
+  height: 80%;
+  border-radius: 30px;
+}
+
+.slide h2{
+    font-family: 'Caveat', cursive;
+    color: white;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 20px;
+}
+
+.manual-btn:hover{
+  background: aquamarine;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+
+/* navigacija automatska */
+
+
+
+.navigation-auto div{
+  border: 2px solid aquamarine;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 20px;
 }
